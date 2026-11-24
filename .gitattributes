@@ -1,0 +1,5 @@
+# Frozen corpus hashes use exact UTF-8 bytes; keep line endings stable on Windows.
+benchmarks/chinese_rag_v1/dataset.json text eol=lf
+benchmarks/chinese_rag_v1/corpus/* text eol=lf
+benchmarks/chinese_rag_v1/SHA256 text eol=lf
+scripts/*.sh text eol=lf

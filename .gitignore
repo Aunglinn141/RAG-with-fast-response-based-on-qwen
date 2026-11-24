@@ -1,0 +1,98 @@
+# Local environments and credentials; keep shareable templates
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.*.sample
+!.env.template
+!.env.*.template
+
+# Local runtime data: models, uploads, databases, logs, reports and tools
+/.runtime/*
+!/.runtime/.gitkeep
+
+# Local datasets, uploads and downloaded models outside the runtime directory
+/data/*
+!/data/.gitkeep
+/datasets/*
+!/datasets/.gitkeep
+/uploads/*
+!/uploads/.gitkeep
+/models/*
+!/models/.gitkeep
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.gguf
+*.safetensors
+*.onnx
+
+# Preserve the benchmark layout without publishing corpora or results
+/benchmarks/**
+!/benchmarks/**/
+!/benchmarks/**/.gitkeep
+
+# Local analysis, presentations and benchmark runs
+/graphify-out/
+/outputs/*
+!/outputs/.gitkeep
+# The API documentation uses these benchmark scripts. All run results stay local.
+!/outputs/concurrency-20261122/
+/outputs/concurrency-20261122/*
+!/outputs/concurrency-20261122/*.py
+
+# Keep the documentation directory layout. Reports, figures and examples are local.
+/docs/**
+!/docs/diagrams/
+!/docs/examples/
+!/docs/diagrams/.gitkeep
+!/docs/examples/.gitkeep
+
+# Keep vLLM profiles and their examples local for now
+/configs/vllm*
+
+# Machine-specific configuration
+configs/local.ps1
+
+# Python environments, bytecode and package builds
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# Test, coverage and static-analysis output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+coverage/
+
+# Frontend dependencies and Vite caches (keep package-lock.json)
+node_modules/
+.vite/
+.vite-temp/
+
+# Local diagnostic logs, including npm's rotated debug logs
+*.log
+npm-debug.log*
+
+# Editor state and operating-system metadata
+.idea/
+~$*
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini
